@@ -1,0 +1,422 @@
+/* BrainTumorAI - Professional Medical UI Styles */
+
+:root {
+    --primary-blue: #1ba7ff;
+    --secondary-teal: #36e0a1;
+    --accent-blue: #075be2;
+    --light-gray: #f8f9fa;
+    --medium-gray: #6c757d;
+    --dark-blue: #0056b3;
+    --success-green: #28a745;
+    --warning-orange: #fd7e14;
+    --danger-red: #dc3545;
+}
+
+/* Global Styles */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+    min-height: 100vh;
+}
+
+/* Navigation */
+.navbar-brand {
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+.navbar-nav .nav-link {
+    font-weight: 500;
+    border-radius: 5px;
+    margin: 0 5px;
+    transition: all 0.3s ease;
+}
+
+.navbar-nav .nav-link:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+    transform: translateY(-1px);
+}
+
+/* Hero Section */
+.hero-section {
+    padding: 80px 0;
+    background: linear-gradient(135deg, var(--primary-blue), var(--secondary-teal));
+    color: white;
+    position: relative;
+    overflow: hidden;
+}
+
+.hero-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grain" width="100" height="100" patternUnits="userSpaceOnUse"><circle cx="25" cy="25" r="1" fill="white" opacity="0.1"/><circle cx="75" cy="75" r="1" fill="white" opacity="0.1"/></pattern></defs><rect width="100" height="100" fill="url(%23grain)"/></svg>');
+    opacity: 0.3;
+}
+
+.hero-section .container {
+    position: relative;
+    z-index: 2;
+}
+
+.hero-icon {
+    font-size: 8rem;
+    opacity: 0.1;
+    animation: pulse 3s ease-in-out infinite;
+}
+
+@keyframes pulse {
+    0%, 100% { opacity: 0.1; transform: scale(1); }
+    50% { opacity: 0.2; transform: scale(1.05); }
+}
+
+/* Models Section */
+.models-section {
+    padding: 80px 0;
+    background: white;
+}
+
+.model-card {
+    background: white;
+    border-radius: 15px;
+    padding: 30px;
+    text-align: center;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    border: 1px solid #e9ecef;
+    transition: all 0.3s ease;
+    height: 100%;
+}
+
+.model-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+    border-color: var(--primary-blue);
+}
+
+.model-icon {
+    font-size: 3rem;
+    color: var(--accent-blue);
+    margin-bottom: 20px;
+}
+
+.model-title {
+    color: var(--accent-blue);
+    font-weight: 700;
+    margin-bottom: 15px;
+}
+
+.model-desc {
+    color: var(--medium-gray);
+    font-size: 0.9rem;
+    margin-bottom: 20px;
+    line-height: 1.5;
+}
+
+.model-stats {
+    border-top: 1px solid #e9ecef;
+    padding-top: 15px;
+}
+
+.stat-item {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 8px;
+}
+
+.stat-label {
+    font-size: 0.85rem;
+    color: var(--medium-gray);
+}
+
+.stat-value {
+    font-weight: 600;
+    color: var(--accent-blue);
+}
+
+/* Upload Section */
+.upload-section {
+    padding: 80px 0;
+    background: var(--light-gray);
+}
+
+.upload-card {
+    background: white;
+    border-radius: 20px;
+    padding: 50px;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+    border: 1px solid #e9ecef;
+}
+
+.upload-zone {
+    border: 3px dashed #dee2e6;
+    border-radius: 15px;
+    padding: 60px 30px;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    background: #fafbfc;
+}
+
+.upload-zone:hover {
+    border-color: var(--primary-blue);
+    background: linear-gradient(135deg, rgba(27, 167, 255, 0.05), rgba(54, 224, 161, 0.05));
+}
+
+.upload-zone.drag-over {
+    border-color: var(--secondary-teal);
+    background: rgba(54, 224, 161, 0.1);
+    transform: scale(1.02);
+}
+
+.upload-zone.file-selected {
+    border-color: var(--success-green);
+    background: rgba(40, 167, 69, 0.05);
+}
+
+.upload-icon {
+    font-size: 4rem;
+    color: var(--medium-gray);
+    margin-bottom: 20px;
+}
+
+.classify-btn {
+    background: linear-gradient(135deg, var(--primary-blue), var(--secondary-teal));
+    border: none;
+    padding: 15px 40px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    border-radius: 50px;
+    transition: all 0.3s ease;
+    box-shadow: 0 5px 15px rgba(27, 167, 255, 0.3);
+}
+
+.classify-btn:hover:not(:disabled) {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 25px rgba(27, 167, 255, 0.4);
+}
+
+.classify-btn:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+.image-preview {
+    margin-top: 30px;
+    text-align: center;
+    padding: 20px;
+    background: var(--light-gray);
+    border-radius: 10px;
+}
+
+.image-preview img {
+    max-height: 300px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Results Section */
+.results-section {
+    padding: 80px 0;
+    background: white;
+}
+
+.result-card {
+    background: white;
+    border-radius: 15px;
+    border: 2px solid #e9ecef;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+    transition: all 0.3s ease;
+    overflow: hidden;
+}
+
+.result-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.12);
+    border-color: var(--primary-blue);
+}
+
+.result-header {
+    background: linear-gradient(135deg, var(--accent-blue), var(--primary-blue));
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+.result-header .model-icon {
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+
+.model-name {
+    margin: 0;
+    font-weight: 700;
+}
+
+.result-body {
+    padding: 25px;
+}
+
+.prediction-result {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.prediction-result h6 {
+    color: var(--medium-gray);
+    font-size: 0.9rem;
+    margin-bottom: 8px;
+}
+
+.prediction-value {
+    font-size: 1.3rem;
+    font-weight: 700;
+    padding: 10px 15px;
+    border-radius: 25px;
+    margin-bottom: 15px;
+}
+
+.prediction-normal { 
+    background: rgba(40, 167, 69, 0.1); 
+    color: var(--success-green); 
+}
+
+.prediction-glioma { 
+    background: rgba(220, 53, 69, 0.1); 
+    color: var(--danger-red); 
+}
+
+.prediction-meningioma { 
+    background: rgba(253, 126, 20, 0.1); 
+    color: var(--warning-orange); 
+}
+
+.prediction-pituitary { 
+    background: rgba(102, 16, 242, 0.1); 
+    color: #6610f2; 
+}
+
+.confidence-score {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.confidence-label {
+    font-size: 0.9rem;
+    color: var(--medium-gray);
+    margin-bottom: 8px;
+}
+
+.confidence-value {
+    font-size: 1.1rem;
+    font-weight: 600;
+    padding: 8px 15px;
+}
+
+.model-stats {
+    border-top: 1px solid #e9ecef;
+    padding-top: 15px;
+}
+
+.stat {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 8px;
+    font-size: 0.9rem;
+}
+
+.stat-label {
+    color: var(--medium-gray);
+}
+
+.stat-value {
+    font-weight: 600;
+    color: var(--accent-blue);
+}
+
+/* Disclaimer */
+.disclaimer-section {
+    margin-top: 60px;
+}
+
+.disclaimer-section .alert {
+    border-left: 5px solid var(--warning-orange);
+    background: rgba(253, 126, 20, 0.05);
+    border-color: rgba(253, 126, 20, 0.2);
+}
+
+/* Loading Modal */
+.modal-content {
+    border: none;
+    border-radius: 15px;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+}
+
+.spinner-border {
+    width: 3rem;
+    height: 3rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .hero-section {
+        padding: 60px 0;
+    }
+    
+    .upload-card {
+        padding: 30px 20px;
+    }
+    
+    .upload-zone {
+        padding: 40px 20px;
+    }
+    
+    .models-section,
+    .upload-section,
+    .results-section {
+        padding: 60px 0;
+    }
+    
+    .model-card {
+        margin-bottom: 20px;
+    }
+}
+
+@media (max-width: 576px) {
+    .hero-section h1 {
+        font-size: 2rem;
+    }
+    
+    .upload-icon {
+        font-size: 3rem;
+    }
+    
+    .classify-btn {
+        padding: 12px 30px;
+        font-size: 1rem;
+    }
+}
+
+/* Animation Classes */
+.fade-in {
+    animation: fadeIn 0.6s ease-in;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Utility Classes */
+.text-gradient {
+    background: linear-gradient(135deg, var(--primary-blue), var(--secondary-teal));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.shadow-lg {
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1) !important;
+}
