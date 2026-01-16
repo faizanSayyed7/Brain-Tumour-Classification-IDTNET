@@ -87,8 +87,8 @@ IDTNet features a novel hybrid architecture that includes:
 | Optimizer | Adam |
 | Learning Rate | 0.0001 |
 | Loss Function | Categorical Cross-Entropy |
-| Batch Size | 16 |
-| Epochs | 10 |
+| Batch Size | 32 |
+| Epochs | 15 |
 | Callbacks | EarlyStopping, ReduceLROnPlateau |
 
 ## 📊 Training Progress
