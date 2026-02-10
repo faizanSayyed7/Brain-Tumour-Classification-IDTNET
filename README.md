@@ -5,7 +5,7 @@ A novel deep learning approach for classifying brain tumors in MRI scans using I
 ## 🎯 Overview
 
 This project introduces IDTNet (Inception-Dense-Transition Network), a custom CNN architecture designed specifically for brain tumor classification from MRI images. The model achieves 98.17% accuracy in classifying four types of brain conditions: Glioma, Meningioma, Pituitary tumors, and No Tumor cases.
-![IDTNet Architecture](template/Untitled.png)
+![IDTNet Architecture](templates/Untitled.png)
 
 ### Key Features
 
