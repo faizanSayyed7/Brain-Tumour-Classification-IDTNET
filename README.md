@@ -97,8 +97,8 @@ IDTNet features a novel hybrid architecture that includes:
 The model was trained for 10 epochs with the following final metrics:
 
 - Training Accuracy: 98.22%
-- Validation Accuracy: 92.36%
-- Training Loss: 0.0546
+- Validation Accuracy: 97.36%
+- Training Loss: 0.0246
 - Validation Loss: 0.3329
 
 
